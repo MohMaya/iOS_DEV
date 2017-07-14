@@ -33,7 +33,9 @@ class CalculatorBrain{
         // Instead of using different functions for every operation, we use closure whuich is an inline function definition
         "+": Operation.BinaryOperation({ (op1,op2) in return op1+op2}), // We have minimized the above code using type inference feature of swift
         "-": Operation.BinaryOperation({$0 - $1}),  //Further minimized using positional arguments
-        "=": Operation.Equals
+        "=": Operation.Equals,
+        "C": Operation.Clear,
+        ".": Operation.Decimal
     ]
     
     private enum Operation {
@@ -41,6 +43,8 @@ class CalculatorBrain{
         case UnaryOperation((Double) -> Double)     //A function that take a double and returns a double
         case BinaryOperation((Double,Double) -> Double)
         case Equals
+        case Clear
+        case Decimal
     }
     
     
@@ -55,7 +59,8 @@ class CalculatorBrain{
                 executePendingBinaryOperation()
                 pending = pendingBinaryOperationInfo(binaryFunction: function, firstOperand: accumulator)
             case .Equals: executePendingBinaryOperation()
-                
+            case .Clear : break
+            case .Decimal: break
             }
         }
     }

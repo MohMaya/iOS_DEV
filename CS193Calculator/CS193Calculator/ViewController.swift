@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         //print("touched \(String(describing: digit)) Digit")
         if userIsInTheMiddleOfTyping{
         let textCurrentlyInDisplay = display.text!
-        display.text = textCurrentlyInDisplay + digit //digit is used to concatenate the strings
+        display.text = textCurrentlyInDisplay + digit //+ is used to concatenate the strings
         }
         else
         {
