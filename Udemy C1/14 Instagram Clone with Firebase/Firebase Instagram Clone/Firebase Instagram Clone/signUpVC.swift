@@ -34,7 +34,11 @@ class signUpVC: UIViewController {
                     alert.addAction(ok)
                     self.present(alert, animated: true, completion: nil)
                 }else{
-                    self.performSegue(withIdentifier: "toTabBarSegue", sender: nil)
+                    UserDefaults.standard.set(user!.email, forKey: "usersigned")
+                    UserDefaults.standard.synchronize()
+                    let delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+                    delegate.rememberLogin()
+
                 }
             })
         }
@@ -51,7 +55,10 @@ class signUpVC: UIViewController {
                     alert.addAction(ok)
                     self.present(alert, animated: true, completion: nil)
                 }else{
-                    self.performSegue(withIdentifier: "toTabBarSegue", sender: nil)
+                    UserDefaults.standard.set(user!.email, forKey: "usersigned")
+                    UserDefaults.standard.synchronize()
+                    let delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+                    delegate.rememberLogin()
                 }
             })
             
