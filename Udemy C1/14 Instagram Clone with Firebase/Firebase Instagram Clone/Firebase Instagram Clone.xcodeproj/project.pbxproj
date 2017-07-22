@@ -15,6 +15,7 @@
 		E719142F1F1A3C57003EA424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E719142D1F1A3C57003EA424 /* LaunchScreen.storyboard */; };
 		E71914371F1A3CD8003EA424 /* signUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71914361F1A3CD8003EA424 /* signUpVC.swift */; };
 		E71914391F1A7051003EA424 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E71914381F1A7051003EA424 /* GoogleService-Info.plist */; };
+		E7855B041F230F5800FF5B8C /* TapMe.png in Resources */ = {isa = PBXBuildFile; fileRef = E7855B031F230F5800FF5B8C /* TapMe.png */; };
 		F256202DA1AF8082129FEF27 /* Pods_Firebase_Instagram_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A1CF04A589322B60A92714 /* Pods_Firebase_Instagram_Clone.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		E71914301F1A3C57003EA424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E71914361F1A3CD8003EA424 /* signUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpVC.swift; sourceTree = "<group>"; };
 		E71914381F1A7051003EA424 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E7855B031F230F5800FF5B8C /* TapMe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TapMe.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				E71914221F1A3C57003EA424 /* AppDelegate.swift */,
 				E71914241F1A3C57003EA424 /* FeedVC.swift */,
 				E71914261F1A3C57003EA424 /* uploadVC.swift */,
+				E7855B031F230F5800FF5B8C /* TapMe.png */,
 				E71914281F1A3C57003EA424 /* Main.storyboard */,
 				E71914361F1A3CD8003EA424 /* signUpVC.swift */,
 				E719142B1F1A3C57003EA424 /* Assets.xcassets */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E719142F1F1A3C57003EA424 /* LaunchScreen.storyboard in Resources */,
+				E7855B041F230F5800FF5B8C /* TapMe.png in Resources */,
 				E71914391F1A7051003EA424 /* GoogleService-Info.plist in Resources */,
 				E719142C1F1A3C57003EA424 /* Assets.xcassets in Resources */,
 				E719142A1F1A3C57003EA424 /* Main.storyboard in Resources */,
@@ -393,6 +397,7 @@
 				E71914351F1A3C57003EA424 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

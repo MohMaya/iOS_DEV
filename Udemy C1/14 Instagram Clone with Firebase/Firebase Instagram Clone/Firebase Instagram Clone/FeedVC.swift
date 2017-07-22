@@ -15,11 +15,16 @@ class FeedVC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func logOutButtonClicked(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "usersigned")
+        UserDefaults.standard.synchronize()
+        
+        let signUp = self.storyboard?.instantiateViewController(withIdentifier: "signUpVC") as! signUpVC
+        let delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        delegate.window?.rootViewController = signUp
+        delegate.rememberLogin()
     }
-
 
 }
 
