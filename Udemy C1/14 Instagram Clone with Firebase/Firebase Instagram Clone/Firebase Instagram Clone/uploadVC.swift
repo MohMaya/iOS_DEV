@@ -19,6 +19,7 @@ class uploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     
     @IBOutlet weak var postText: UITextView!
     
+    @IBOutlet weak var uploadButton: UIButton!
     
     var uuid = NSUUID().uuidString
     
@@ -50,6 +51,9 @@ class uploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     
     @IBAction func uploadButtonClicked(_ sender: Any) {
         
+        
+        self.uploadButton.isEnabled = false
+        // To ensure that the user does not hit upload button more than once
         let mediaFolder = Storage.storage().reference().child("media")
         if let data = UIImageJPEGRepresentation(postImage.image!, 0.5){
             mediaFolder.child("\(uuid).jpeg").putData(data, metadata: nil, completion: { (metadata, error) in
@@ -59,7 +63,20 @@ class uploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                     alert.addAction(ok)
                     self.present(alert, animated: true, completion: nil)
                 }else{
-                    print(metadata?.downloadURL()?.absoluteString)
+                    let imageURL = metadata?.downloadURL()?.absoluteString
+                    
+                    let post = ["image" : imageURL!, "postedby" : Auth.auth().currentUser!.email!, "uuid" : self.uuid, "posttext" : self.postText.text!] as [String : Any]
+                    //Post Created
+                    
+                    
+                    //Now uploading to Database
+                    Database.database().reference().child("users").child((Auth.auth().currentUser?.uid)!).child("posts").childByAutoId().setValue(post)
+                    
+                    self.postImage.image = UIImage(named: "TapMe.png")
+                    self.postText.text = ""
+                    self.uploadButton.isEnabled = true
+                    //So that user can upload a new post after the previous one is finalized
+                    
                 }
             })
         }

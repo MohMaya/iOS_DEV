@@ -19,6 +19,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>libwebp.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>nanopb.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +42,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1595718A468F40A3BCFB5F663CFF7009</key>
+		<key>624C5A9D7E41DE757CEDA330D7C13308</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A3A32744BE6E48EE0E28786D351FE4E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9F9D209F54A5BE493D69FD234ACC636F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
